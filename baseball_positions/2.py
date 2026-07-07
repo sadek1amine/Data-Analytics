@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Read CSV مباشرة
+# Read CSV 
 df = pd.read_csv("baseball_positions.csv")
 
 # Split multiple positions
@@ -15,6 +15,6 @@ position_counts = df["Position"].value_counts()
 
 # Convert to table
 result = position_counts.reset_index()
-result.columns = ["Position", "Player Count"]
+result.columns =  ["Position", "Player Count"]
 
-print(result)
+print(result) 

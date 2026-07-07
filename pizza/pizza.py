@@ -5,7 +5,7 @@ transactions = pd.read_csv("transaction.csv")
 products = pd.read_csv("product.csv") 
 price_history = pd.read_csv("price_history.csv")
 
-
+ 
 transactions["order_date"] = pd.to_datetime(transactions["order_date"])
 price_history["effective_date"] = pd.to_datetime(price_history["effective_date"])
 
@@ -25,8 +25,8 @@ latest_price = valid_prices.drop_duplicates("order_detail_id")
 
 
 latest_price["revenue"] = latest_price["quantity"] * latest_price["price"]
-
-
+   
+  
 result = latest_price[[
     "order_detail_id",
     "order_id",
